@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 window.onload = function generateRow() {
-
+	//this.localStorage.clear();
 	// if (localStorage.getItem('topzero')!= null){
 	// 	document.getElementById('topzero').innerHTML = window.localStorage.getItem('ding_top');
 	// }
@@ -73,17 +73,29 @@ window.onload = function generateRow() {
 	if(retrievedTable){
 		for(var j=0; j<retrievedTable.length; j++){
 			var new_row = tbody.insertRow();
+			var top2 = document.getElementById('topzero')
+			var topding = document.getElementById('topzero').innerHTML;
+			var top3 = document.getElementById('topzero2')
+			var topwid = document.getElementById('topzero2').innerHTML;
+			var top4 = document.getElementById('topzero3'); 
+			var topsal = document.getElementById('topzero3').innerHTML; 
+
 			for(var y=0; y<5; y++){
 				var new_cell = new_row.insertCell();
 				new_cell.innerHTML = retrievedTable[j][y];
-
+				top2.innerHTML = Number(topding) + Number(retrievedTable[j][2]);
+				top3.innerHTML = Number(topwid) + Number(retrievedTable[j][3]);
 			}
 		}
+
+		var first = (top2.innerHTML*DINGUS_PRICE);
+		var second = ((top3.innerHTML*WIDGET_PRICE));
+		top4.innerHTML = ((Number(top2.innerHTML*DINGUS_PRICE)) + Number((top3.innerHTML*WIDGET_PRICE))).toFixed(2);
+
 	}
-	
+
 }
 
-//var idnum = (generateEntries().length) +1;
 function updateOrder(){
 	var table = document.getElementById("tbody");
 	row = table.insertRow();
