@@ -1,0 +1,136 @@
+body, h5, th {
+    font-family: 'Montserrat';font-size: 18px;
+}
+
+h1, h3{
+    font-family: 'Paytone One', sans-serif;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 30% 37% ;
+    grid-gap: 10px;
+    padding: 10px;
+}
+.grid-item1 {
+      grid-column: 1 / span 1;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 30px;
+}
+
+.grid-item2 {
+      grid-column: 2 / span 1;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 30px;
+}
+
+.grid-item3 {
+      grid-column: 3 / span 1;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 18px;
+}
+
+.tabletwo, .tabletwo th, .tabletwo td {
+    border: 1px solid black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+fieldset {
+    border: 0;
+}
+
+th.gray {
+    background-color: lightgray;
+}
+
+table, th, td{
+    text-align: center;
+}
+
+#img2{
+    height: 100%;
+    width: 100%;
+}
+#img1{
+    height: 100%;
+    width: 100%;
+}
+#frame1{
+    height: 100%;
+    width: 100%;
+    border:none;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 30% 30% 37% ;
+    grid-gap: 10px;
+    padding: 10px;
+}
+.grid2-item1 {
+      grid-column: 1 / span 1;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 30px;
+      
+}
+.grid2-item2 {
+      grid-column: 2 / span 1;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 30px;
+}
+
+.grid2-item3 {
+      grid-column: 3 / span 1;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 30px;
+}
+
+.zero{
+    color: blue;
+}
+#dollar{
+    color:green;
+}
+.button-success {
+    background: rgb(28, 184, 65);
+    color: white;
+    border-radius: 6px;
+    border: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); 
+    width: 90px;
+    height: 38px;
+}
+
+.button-success[disabled]{
+    background: rgb(227, 251, 227);
+}
+
+.button-error {
+    background: rgb(202, 60, 60);
+    color: white;
+    border-radius: 6px;
+    border: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    width: 90px;
+    height: 38px;
+}
+/* .shadedboxes{
+    background-color: rgb(240,240,240);
+    color: rgb(169,169,169);
+} */
+
+.shorter{
+    width: 5%;
+}
+
+.pure-form{
+    margin-left: 10px;
+}

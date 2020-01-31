@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>D&W Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="hw2css.css" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat%7CPaytone+One&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous" />
+        <script src="hw2.js"> </script>
+    </head>
+        <body>
+            <main>
+                <header>
+                    <h1><img src ="/images/dw-logo.png" height="80" width="120" alt="Logo"/> Global Dashboard</h1>
+                </header>
+                
+                <div class="grid-container2">
+
+                    <div class="grid2-item1"> 
+                        <h3> Dingus </h3>
+                        <p class="zero" id="topzero"> 0 </p>
+                    </div>
+            
+                    <div class="grid2-item2"> 
+                        <h3> Widget </h3>
+                        <p class="zero" id="topzero2"> 0 </p>
+                    </div>
+
+                    <div class="grid2-item3">  
+                        <h3> Sales </h3>
+                        <!-- <p class="zero" id="topzero3"><span id="dollar">$</span> 72.72 </p> -->
+                        <p id="dollar">$<span class="zero" id="topzero3">0.00 </span>  </p>
+                    </div>   
+                </div>   
+            <hr>
+                <table id = "tabletwo" style="width:90%" class = "tabletwo">
+                    <caption> Order History </caption>
+                    <colgroup>
+                        <col span='1' style='background-color: lightgray;'>
+                        <col span='4'>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th rowspan = "2"> ID#</th>
+                            <th rowspan = "2"> Date</th>
+                            <th colspan = "2"> Quantity</th>
+                            <th rowspan = "2" id="totaltable"> Total</th>
+                        </tr>
+                        <tr>
+                            <th> Dingus </th>
+                            <th> Widget </th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tbody">
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="5"> &copy; 2020 D&W Worldwide. </td>
+                        </tr>
+                    </tfoot>
+        
+                </table>
+            
+                <details>
+                    <summary>Order Form</summary>
+                    <hr>
+                    <form class = "pure-form">
+                        <fieldset>
+                            
+                                <div>
+                                <label>Dingus:</label>
+                                <input type="number" min="0" name="Dingus" value = "0" class="shorter" id="Dingus" onkeyup='myFunction()'> @ <input type="text" name="lastname" value = "14.25" id = "DingPrice" class="shadedboxes" disabled> = $ <input type="number" name="price" value = "0.00" id= "DingTot" onkeyup='myFunction()' class="shadedboxes" disabled>
+                                </div>
+                                <br>
+                            
+                                <div>
+                                <label> Widget: </label>
+                                <input type="number" min="0" name="Widget" value="0" class="shorter" id="Widget" onkeyup='myFunction()'> @ <input type="text" name="lastname" value = "9.99" id = "WidPrice" class="shadedboxes" disabled> = $ <input type="number" name="price" value = "0.00" id="WidTot" onkeyup='myFunction()' class="shadedboxes" disabled>
+                                </div>
+                                <br>
+
+                                <div>
+                                <label>Total $</label>
+                                <input type="number" name="Total" id="Tot" class="shadedboxes" value="0.00" onkeyup='myFunction()' disabled> 
+                                </div>
+                        
+                                <br>
+                                <button class="button-error" type="button" onclick="ClearFields()">Cancel</button>
+                                <button class="button-success" type="button" id="Order" onclick="updateOrder()">Order</button>
+
+                        </fieldset>
+                    </form>
+                </details>
+            </main>
+        </body>
+    
+
+</html>
+
+
